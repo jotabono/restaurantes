@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Menús</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let m of menus | keys">
+      Menús: {{m.key}}
+    </ion-item>
+  </ion-list>
+</ion-content>
