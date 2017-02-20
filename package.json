@@ -41,6 +41,7 @@
     "cordova-plugin-statusbar",
     "cordova-plugin-device",
     "cordova-plugin-splashscreen",
+    "cordova-plugin-x-toast",
     "ionic-plugin-keyboard", {
       "variables": {
         "SENDER_ID": "1022449847859"
