@@ -4,6 +4,8 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class Globals {
+  deviceToken: any;
+
   constructor(private http: Http) {
     this.http = http;
   }

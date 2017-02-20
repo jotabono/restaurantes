@@ -14,11 +14,11 @@ type ServerResponse = {
   [name: string]: { [name: string]: Category; } & { name: string };
 }
 @Component({
-  selector: 'page-home',
+  selector: 'page-menus',
   providers: [Globals],
-  templateUrl: 'home.html'
+  templateUrl: 'menus.html'
 })
-export class HomePage {
+export class MenusPage {
   menus = [];
 
   constructor(public navCtrl: NavController, public globals: Globals) {

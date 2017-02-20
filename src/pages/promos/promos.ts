@@ -4,11 +4,11 @@ import { NavController } from 'ionic-angular';
 import { Promotion } from '../../model/promotion';
 
 @Component({
-  selector: 'page-about',
+  selector: 'page-promos',
   providers: [Globals],
-  templateUrl: 'about.html'
+  templateUrl: 'promos.html'
 })
-export class AboutPage {
+export class PromosPage {
   promotions = [];
 
   constructor(public navCtrl: NavController, public globals: Globals) {
