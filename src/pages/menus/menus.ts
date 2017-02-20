@@ -37,4 +37,18 @@ export class MenusPage {
       err => { console.log(err) }
     );
   }
+  toggleCats(data) {
+    if (data.showCats) {
+        data.showCats = false;
+    } else {
+        data.showCats = true;
+    }
+  }
+  toggleDishes(data) {
+    if (data.showDishes) {
+        data.showDishes = false;
+    } else {
+        data.showDishes = true;
+    }
+  }
 }

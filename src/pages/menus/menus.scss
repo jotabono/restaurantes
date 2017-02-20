@@ -1,3 +1,53 @@
 page-menus {
+  .item-accordion {
+    line-height: 38px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: 0.09s all linear;
+  }
+  .item-accordion.ng-hide {
+    line-height: 0;
+  }
+  .item-accordion.ng-hide-add,
+  .item-accordion.ng-hide-remove {
+    display: block !important;
+  }
 
+  .list-menu{
+    padding:0px !important;
+    margin:0px !important;
+  }
+  .menus {
+    background-color: #333131;
+    color: white;
+    padding: 10px !important;
+    margin:0px;
+  }
+  .menus:hover{
+    cursor:pointer;
+    background-color: rgb(130, 130, 130);
+    transition: 0.3s;
+  }
+  .cats{
+    background-color: #333131;
+    color: white;
+    padding: 10px !important;
+    margin:0px;
+  }
+  .cats:hover{
+    cursor:pointer;
+    background-color: rgb(43, 65, 97);
+    transition: 0.3s;
+  }
+  .dishes{
+    background-color: #333131;
+    color: white;
+    padding: 10px !important;
+    margin:0px;
+  }
+  .dishes:hover{
+    cursor:pointer;
+    background-color: rgb(122, 47, 86);
+    transition: 0.3s;
+  }
 }

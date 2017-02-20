@@ -4,20 +4,21 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ul>
-    <li *ngFor="let menu of menus">
-      {{ menu.name }}
-      <ul>
-        <li *ngFor="let category of menu.categories">
-          {{ category.name }}
-          <ul>
-            <li *ngFor="let dish of category.dishes">
-              {{ dish.Name }}
+<ion-content>
+  <ul class="list-menu" *ngFor="let menu of menus">
+    <li class="item-stable menus" (click)="toggleCats(menu)" [ngClass]="{active: menu.showCats}">
+      {{menu.name}}
+    </li>
+      <ul class="list-menu" *ngFor="let category of menu.categories">
+        <li class="item-accordion cats" [hidden]="menu.showCats" (click)="toggleDishes(category)">
+          {{category.name}}
+        </li>
+          <ul class="list-menu" *ngFor="let dish of category.dishes">
+            <li class="item-accordion dishes" [hidden]="category.showDishes">
+              <ion-icon color="primary" ios="ios-add" md="md-add"></ion-icon>
+              {{dish.Name}}
             </li>
           </ul>
-        </li>
       </ul>
-    </li>
   </ul>
 </ion-content>

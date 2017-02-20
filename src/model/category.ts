@@ -5,10 +5,12 @@ import {Dish} from '../model/dish';
 export class Category {
   name: string;
   dishes: Array<Dish>
+  showDishes: Boolean;
 
-  constructor(data: { name: string }) {
+  constructor(data: { name: string } & { showDishes: Boolean }) {
     this.name = data.name;
     this.dishes = [];
+    this.showDishes = true;
 
     Object.keys(data).forEach(name => {
       if(name != "name"){
