@@ -4,14 +4,16 @@ import {Dish} from '../model/dish';
 @Injectable()
 export class Category {
   name: string;
-  dishes: {};
+  dishes: Array<Dish>
 
   constructor(data: { name: string }) {
     this.name = data.name;
-    this.dishes = {};
+    this.dishes = [];
 
-    Object.keys(data).forEach(Name => {
-        this.dishes[Name] = new Dish(data[Name]);
+    Object.keys(data).forEach(name => {
+      if(name != "name"){
+        this.dishes.push( new Dish(data[name]));
+      }
     });
   }
 

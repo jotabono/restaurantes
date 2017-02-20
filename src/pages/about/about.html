@@ -1,11 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Promociones
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <ul *ngFor="let promotion of promotions">
+    <li>
+      {{ promotion.name }}
+      <ul>
+        <li>
+          {{ promotion.description }}
+        </li>
+      </ul>
+    </li>
+  </ul>
 </ion-content>
