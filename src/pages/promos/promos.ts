@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Globals } from '../../providers/globals';
 import { NavController } from 'ionic-angular';
 import { Promotion } from '../../model/promotion';
+import { PromoDetail } from './promo.detail';
 
 @Component({
   selector: 'page-promos',
@@ -10,6 +11,7 @@ import { Promotion } from '../../model/promotion';
 })
 export class PromosPage {
   promotions = [];
+  selectedPromo: Promotion;
 
   constructor(public navCtrl: NavController, public globals: Globals) {
     this.getPromotions();
@@ -21,9 +23,14 @@ export class PromosPage {
         Object.keys(data).forEach(name => {
           this.promotions.push(new Promotion(data[name]));
         });
-        console.log(this.promotions);
       },
       err => { console.log(err) }
     );
+  }
+
+  promoDetail(promotion: Promotion) {
+    this.navCtrl.push(PromoDetail, {
+      promotion: promotion
+    });
   }
 }

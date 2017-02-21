@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { PromosPage } from '../pages/promos/promos';
+import { PromoDetail } from '../pages/promos/promo.detail';
 import { ContactPage } from '../pages/contact/contact';
 import { MenusPage } from '../pages/menus/menus';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -10,10 +11,10 @@ import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 
 const cloudSettings: CloudSettings = {
   'core': {
-    'app_id': '7fcb9d23'
+    'app_id': 'a12c7d56'
   },
   'push': {
-    'sender_id': '1022449847859',
+    'sender_id': '283096001817',
     'pluginConfig': {
       'ios': {
         'badge': true,
@@ -32,7 +33,8 @@ const cloudSettings: CloudSettings = {
     ContactPage,
     MenusPage,
     TabsPage,
-    MenuPipe
+    MenuPipe,
+    PromoDetail
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -44,7 +46,8 @@ const cloudSettings: CloudSettings = {
     PromosPage,
     ContactPage,
     MenusPage,
-    TabsPage
+    TabsPage,
+    PromoDetail
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })

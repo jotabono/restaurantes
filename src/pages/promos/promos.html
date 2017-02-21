@@ -7,14 +7,8 @@
 </ion-header>
 
 <ion-content padding>
-  <ul *ngFor="let promotion of promotions">
-    <li>
-      {{ promotion.name }}
-      <ul>
-        <li>
-          {{ promotion.description }}
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <button *ngFor="let promotion of promotions" (click)="promoDetail(promotion)" ion-button full>
+    <ion-icon name="arrow-forward"></ion-icon>
+    {{ promotion.name }}
+  </button>
 </ion-content>

@@ -25,8 +25,8 @@ export class MyApp {
         return this.push.saveToken(t);
       }).then((t: PushToken) => {
         console.log('Token saved:', t.token);
-        this.globals.deviceToken = t.token;
-
+        this.globals.postDevicetoken(t.token);
+        
         // Toast provisional, para mostrar el Token del dispositivo.
 
         Toast.show(t.token, '5000', 'center').subscribe(

@@ -44,7 +44,7 @@
     "cordova-plugin-x-toast",
     "ionic-plugin-keyboard", {
       "variables": {
-        "SENDER_ID": "1022449847859"
+        "SENDER_ID": "283096001817"
       },
       "locator": "phonegap-plugin-push"
     }

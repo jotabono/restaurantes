@@ -3,22 +3,23 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class Promotion {
-  // ID: string;
+  ID: number;
   name: string;
   description: string;
-   constructor(data: {name: string} & {description: string}) {
-    // this.ID = data.ID;
+
+   constructor(data: {ID: number} & {name: string} & {description: string}) {
+    this.ID = data.ID;
     this.name = data.name;
     this.description = data.description;
   }
 
-  // getName(){
-  //   return this.ID;
-  // }
-  getDescription(){
+  getID(){
+   return this.ID;
+  }
+  getName(){
     return this.name;
   }
-  getThumbnail(){
+  getDescription(){
     return this.description;
   }
 }
