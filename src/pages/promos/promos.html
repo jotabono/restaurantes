@@ -1,8 +1,10 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Promociones
-    </ion-title>
+    <ion-title>{{ 'PROMOSTITLE' | translate }}</ion-title>
+    <ion-select class="sel-lang" [(ngModel)]="lang" (ionChange)="globals.changeLanguage(lang)">
+      <ion-option value="es">{{'SELSPANISH' | translate}}</ion-option>
+      <ion-option value="en">{{'SELENGLISH' | translate}}</ion-option>
+    </ion-select>
   </ion-navbar>
 </ion-header>
 

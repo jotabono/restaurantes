@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-
 import { TabsPage } from '../pages/tabs/tabs';
 import { Push, PushToken } from '@ionic/cloud-angular';
 import { Globals } from '../providers/globals';
 import { Toast } from 'ionic-native';
+import {TranslateService} from 'ng2-translate';
 
 @Component({
   templateUrl: 'app.html',
@@ -14,8 +14,10 @@ import { Toast } from 'ionic-native';
 export class MyApp {
   rootPage = TabsPage;
 
-  constructor(platform: Platform, public push: Push, public globals: Globals) {
+  constructor(platform: Platform, public push: Push, public globals: Globals, translate: TranslateService) {
     platform.ready().then(() => {
+      translate.setDefaultLang('es');
+
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
@@ -26,7 +28,7 @@ export class MyApp {
       }).then((t: PushToken) => {
         console.log('Token saved:', t.token);
         this.globals.postDevicetoken(t.token);
-        
+
         // Toast provisional, para mostrar el Token del dispositivo.
 
         Toast.show(t.token, '5000', 'center').subscribe(

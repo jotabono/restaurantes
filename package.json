@@ -26,6 +26,7 @@
     "ionic-angular": "2.0.0",
     "ionic-native": "2.4.1",
     "ionicons": "3.0.0",
+    "ng2-translate": "^5.0.0",
     "rxjs": "5.0.0-beta.12",
     "serializer.ts": "0.0.12",
     "sw-toolbox": "3.4.0",
@@ -42,7 +43,8 @@
     "cordova-plugin-device",
     "cordova-plugin-splashscreen",
     "cordova-plugin-x-toast",
-    "ionic-plugin-keyboard", {
+    "ionic-plugin-keyboard",
+    {
       "variables": {
         "SENDER_ID": "283096001817"
       },

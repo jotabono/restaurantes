@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Globals } from '../../providers/globals';
 import { Menu } from '../../model/menu';
+
 interface Dish {
   Name: string;
   Description: string;
@@ -39,16 +40,16 @@ export class MenusPage {
   }
   toggleCats(data) {
     if (data.showCats) {
-        data.showCats = false;
+      data.showCats = false;
     } else {
-        data.showCats = true;
+      data.showCats = true;
     }
   }
   toggleDishes(data) {
     if (data.showDishes) {
-        data.showDishes = false;
+      data.showDishes = false;
     } else {
-        data.showDishes = true;
+      data.showDishes = true;
     }
   }
 }

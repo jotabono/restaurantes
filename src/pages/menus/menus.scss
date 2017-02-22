@@ -51,4 +51,11 @@ page-menus {
     background-color: #f53d3d;
     transition: 0.3s;
   }
+  .sel-lang{
+    position: absolute !important;
+    top:0 !important;
+    right:0 !important;
+    display:inline-block !important;
+    float:right !important;
+  }
 }

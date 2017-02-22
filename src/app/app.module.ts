@@ -7,7 +7,9 @@ import { ContactPage } from '../pages/contact/contact';
 import { MenusPage } from '../pages/menus/menus';
 import { TabsPage } from '../pages/tabs/tabs';
 import { MenuPipe } from '../pipes/menu-pipe';
+import { Http } from "@angular/http";
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+import { TranslateLoader, TranslateModule, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
 
 const cloudSettings: CloudSettings = {
   'core': {
@@ -38,7 +40,12 @@ const cloudSettings: CloudSettings = {
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    CloudModule.forRoot(cloudSettings)
+    CloudModule.forRoot(cloudSettings),
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: (createTranslateLoader),
+      deps: [Http]
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -52,3 +59,6 @@ const cloudSettings: CloudSettings = {
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })
 export class AppModule { }
+export function createTranslateLoader(http: Http) {
+  return new TranslateStaticLoader(http, 'assets/i18n', '.json');
+}

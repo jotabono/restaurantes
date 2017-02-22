@@ -1,6 +1,10 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Menús</ion-title>
+    <ion-title>{{ 'MENUTITLE' | translate }}</ion-title>
+    <ion-select class="sel-lang" [(ngModel)]="lang" (ionChange)="globals.changeLanguage(lang)">
+      <ion-option value="es">{{'SELSPANISH' | translate}}</ion-option>
+      <ion-option value="en">{{'SELENGLISH' | translate}}</ion-option>
+    </ion-select>
   </ion-navbar>
 </ion-header>
 
@@ -9,16 +13,17 @@
     <li class="item-stable menus" (click)="toggleCats(menu)" [ngClass]="{active: menu.showCats}">
       {{menu.name}}
     </li>
-      <ul class="list-menu" *ngFor="let category of menu.categories">
-        <li class="item-accordion cats" [hidden]="menu.showCats" (click)="toggleDishes(category)">
-          <ion-icon color="danger" name="arrow-forward"></ion-icon>
-          {{category.name}}
-          <ul class="list-menu" *ngFor="let dish of category.dishes">
-            <li class="item-accordion dishes" [hidden]="category.showDishes">
-              {{dish.Name}}
-            </li>
-          </ul>
-        </li>
-      </ul>
+    <ul class="list-menu" *ngFor="let category of menu.categories">
+      <li class="item-accordion cats" [hidden]="menu.showCats" (click)="toggleDishes(category)">
+        <ion-icon color="danger" name="arrow-forward"></ion-icon>
+        {{category.name}}
+        <ul class="list-menu" *ngFor="let dish of category.dishes">
+          <li class="item-accordion dishes" [hidden]="category.showDishes">
+            {{dish.Name}}
+          </li>
+        </ul>
+      </li>
+    </ul>
   </ul>
+
 </ion-content>
