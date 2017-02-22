@@ -13,7 +13,7 @@ import { TranslateLoader, TranslateModule, TranslateStaticLoader } from 'ng2-tra
 
 const cloudSettings: CloudSettings = {
   'core': {
-    'app_id': 'a12c7d56'
+    'app_id': 'ad5ac44f'
   },
   'push': {
     'sender_id': '283096001817',
