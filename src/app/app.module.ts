@@ -3,7 +3,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { PromosPage } from '../pages/promos/promos';
 import { PromoDetail } from '../pages/promos/promo.detail';
-import { ContactPage } from '../pages/contact/contact';
+import { RestaurantPage } from '../pages/restaurant/restaurant';
 import { MenusPage } from '../pages/menus/menus';
 import { TabsPage } from '../pages/tabs/tabs';
 import { MenuPipe } from '../pipes/menu-pipe';
@@ -32,7 +32,7 @@ const cloudSettings: CloudSettings = {
   declarations: [
     MyApp,
     PromosPage,
-    ContactPage,
+    RestaurantPage,
     MenusPage,
     TabsPage,
     MenuPipe,
@@ -51,7 +51,7 @@ const cloudSettings: CloudSettings = {
   entryComponents: [
     MyApp,
     PromosPage,
-    ContactPage,
+    RestaurantPage,
     MenusPage,
     TabsPage,
     PromoDetail

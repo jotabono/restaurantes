@@ -1,15 +1,12 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{ 'PROMOSTITLE' | translate }}</ion-title>
+    <ion-title>{{ 'RESTAURANTTITLE' | translate }}</ion-title>
     <ion-select class="sel-lang" [(ngModel)]="lang" (ionChange)="globals.changeLanguage(lang)">
-      <ion-option value="es">{{'SELSPANISH' | translate}}</ion-option>
+      <ion-option value="es" selected="true">{{'SELSPANISH' | translate}}</ion-option>
       <ion-option value="en">{{'SELENGLISH' | translate}}</ion-option>
     </ion-select>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <button *ngFor="let promotion of promotions" (click)="promoDetail(promotion)" ion-button full>
-    {{ promotion.name }}
-  </button>
 </ion-content>

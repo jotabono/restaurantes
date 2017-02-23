@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
 import { Globals } from '../../providers/globals';
 import { Menu } from '../../model/menu';
+import { LoadingController } from 'ionic-angular';
 
 interface Dish {
   Name: string;
@@ -20,15 +20,21 @@ type ServerResponse = {
   templateUrl: 'menus.html'
 })
 export class MenusPage {
+  loader: any;
   menus = [];
 
-  constructor(public navCtrl: NavController, public globals: Globals) {
+  constructor(public globals: Globals, public loadingCtrl: LoadingController) {
+    this.loader = this.loadingCtrl.create({
+      content: "Cargando..."
+    });
+    this.loader.present();
     this.getMenus();
   }
 
   getMenus() {
     this.globals.getMenus().subscribe(
       data => {
+        this.loader.dismiss();
         this.menus = new Array<Menu>();
         Object.keys(data).forEach(name => {
           this.menus.push(new Menu(data[name]));

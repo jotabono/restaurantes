@@ -27,7 +27,6 @@ export class Globals {
         deviceToken = res.json();
       });
   }
-
   // Función global para cambiar idioma.
   changeLanguage(lang) {
     this.translate.setDefaultLang(lang);
