@@ -1,1 +1,18 @@
 <ion-nav [root]="rootPage"></ion-nav>
+
+<ion-footer>
+  <div class="tabs" [style.backgroundColor]="globals.color">
+    <button ion-button icon-left [style.color]="globals.textColor" class="tab" (click)="goRtts()">
+    <ion-icon name="home"></ion-icon>
+{{ 'RESTAURANTTITLE' | translate }}
+  </button>
+    <button ion-button icon-left [style.color]="globals.textColor" class="tab" (click)="goMenus()">
+    <ion-icon name="restaurant"></ion-icon>
+{{ 'MENUTITLE' | translate }}
+  </button>
+    <button ion-button icon-left [style.color]="globals.textColor" class="tab" (click)="goPromos()">
+    <ion-icon name="logo-euro"></ion-icon>
+{{ 'PROMOSTITLE' | translate }}
+  </button>
+  </div>
+</ion-footer>

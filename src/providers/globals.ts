@@ -5,9 +5,15 @@ import {TranslateService} from 'ng2-translate';
 
 @Injectable()
 export class Globals {
+color:string;
+textColor: string;
 
   constructor(private http: Http, public translate: TranslateService) {
     this.http = http;
+
+    // Definir los colores de la App.
+    this.color = "#00386c";
+    this.textColor = "#ffffff";
   }
   // GET de Menús: Menús, Categorías y Platos.
   getMenus(): any {
