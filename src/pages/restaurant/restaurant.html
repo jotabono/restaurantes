@@ -1,5 +1,8 @@
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+  <ion-icon name="menu"></ion-icon>
+</button>
     <ion-title>{{ 'RESTAURANTTITLE' | translate }}</ion-title>
     <ion-select class="sel-lang" [(ngModel)]="lang" (ionChange)="globals.changeLanguage(lang)">
       <ion-option value="es" selected="true">{{'SELSPANISH' | translate}}</ion-option>

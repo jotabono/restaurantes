@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
   <ion-icon name="menu"></ion-icon>
 </button>
-    <ion-title>{{ 'PROMOSTITLE' | translate }}</ion-title>
+    <ion-title>{{ 'NOTIFICATIONSTITLE' | translate }}</ion-title>
     <ion-select class="sel-lang" [(ngModel)]="lang" (ionChange)="globals.changeLanguage(lang)">
       <ion-option value="es">{{'SELSPANISH' | translate}}</ion-option>
       <ion-option value="en">{{'SELENGLISH' | translate}}</ion-option>
@@ -12,7 +12,11 @@
 </ion-header>
 
 <ion-content padding>
-  <button *ngFor="let promotion of promotions" (click)="promoDetail(promotion)" ion-button full>
-    {{ promotion.name }}
-  </button>
+      <div  class="toggle-icon toggle-checked">
+        <ion-toggle [(ngModel)]="notification" (ionChange)="toggleNotification($event)" ></ion-toggle>
+      </div>
+      <div class="information">
+         <h1>{{ status }}</h1>
+         <h4>{{ description }}</h4>
+      </div>
 </ion-content>

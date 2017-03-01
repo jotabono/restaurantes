@@ -5,8 +5,9 @@ import { PromosPage } from '../pages/promos/promos';
 import { PromoDetail } from '../pages/promos/promo.detail';
 import { RestaurantPage } from '../pages/restaurant/restaurant';
 import { MenusPage } from '../pages/menus/menus';
+import { NotificationsPage } from '../pages/notifications/notifications';
+import { SocialNetworksPage } from '../pages/socialnetworks/socialnetworks';
 import { TabsPage } from '../pages/tabs/tabs';
-import { MenuPipe } from '../pipes/menu-pipe';
 import { Http } from "@angular/http";
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 import { TranslateLoader, TranslateModule, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
@@ -35,8 +36,9 @@ const cloudSettings: CloudSettings = {
     RestaurantPage,
     MenusPage,
     TabsPage,
-    MenuPipe,
-    PromoDetail
+    PromoDetail,
+    NotificationsPage,
+    SocialNetworksPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -54,7 +56,9 @@ const cloudSettings: CloudSettings = {
     RestaurantPage,
     MenusPage,
     TabsPage,
-    PromoDetail
+    PromoDetail,
+    NotificationsPage,
+    SocialNetworksPage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })

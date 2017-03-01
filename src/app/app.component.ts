@@ -9,6 +9,8 @@ import { TranslateService } from 'ng2-translate';
 import { RestaurantPage } from '../pages/restaurant/restaurant';
 import { MenusPage } from '../pages/menus/menus';
 import { PromosPage } from '../pages/promos/promos';
+import { NotificationsPage } from '../pages/notifications/notifications';
+import { SocialNetworksPage } from '../pages/socialnetworks/socialnetworks';
 
 @Component({
   templateUrl: 'app.html',
@@ -59,5 +61,13 @@ export class MyApp {
 
   goPromos() {
     this.nav.setRoot(PromosPage);
+  }
+
+  goNotifications() {
+    this.nav.push(NotificationsPage);
+  }
+
+  goSocialNetworks() {
+    this.nav.push(SocialNetworksPage)
   }
 }
