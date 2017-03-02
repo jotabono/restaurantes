@@ -7,6 +7,7 @@ import { RestaurantPage } from '../pages/restaurant/restaurant';
 import { MenusPage } from '../pages/menus/menus';
 import { NotificationsPage } from '../pages/notifications/notifications';
 import { SocialNetworksPage } from '../pages/socialnetworks/socialnetworks';
+import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { Http } from "@angular/http";
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
@@ -38,7 +39,8 @@ const cloudSettings: CloudSettings = {
     TabsPage,
     PromoDetail,
     NotificationsPage,
-    SocialNetworksPage
+    SocialNetworksPage,
+    HomePage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -58,7 +60,8 @@ const cloudSettings: CloudSettings = {
     TabsPage,
     PromoDetail,
     NotificationsPage,
-    SocialNetworksPage
+    SocialNetworksPage,
+    HomePage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })

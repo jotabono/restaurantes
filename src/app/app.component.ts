@@ -7,6 +7,7 @@ import { Globals } from '../providers/globals';
 import { Toast } from 'ionic-native';
 import { TranslateService } from 'ng2-translate';
 import { RestaurantPage } from '../pages/restaurant/restaurant';
+import { HomePage } from '../pages/home/home';
 import { MenusPage } from '../pages/menus/menus';
 import { PromosPage } from '../pages/promos/promos';
 import { NotificationsPage } from '../pages/notifications/notifications';
@@ -18,7 +19,7 @@ import { SocialNetworksPage } from '../pages/socialnetworks/socialnetworks';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage = RestaurantPage;
+  rootPage = HomePage;
   tab1Root: any = RestaurantPage;
   tab2Root: any = MenusPage;
   tab3Root: any = PromosPage;
@@ -51,23 +52,9 @@ export class MyApp {
     });
   }
 
-  goRtts() {
-    this.nav.setRoot(RestaurantPage);
-  }
-
-  goMenus() {
-    this.nav.setRoot(MenusPage);
-  }
-
-  goPromos() {
-    this.nav.setRoot(PromosPage);
-  }
-
-  goNotifications() {
-    this.nav.push(NotificationsPage);
-  }
-
-  goSocialNetworks() {
-    this.nav.push(SocialNetworksPage)
-  }
+  goRtts() {this.nav.setRoot(RestaurantPage);}
+  goMenus() {this.nav.setRoot(MenusPage);}
+  goPromos() {this.nav.setRoot(PromosPage);}
+  goNotifications() {this.nav.push(NotificationsPage);}
+  goSocialNetworks() {this.nav.push(SocialNetworksPage);}
 }

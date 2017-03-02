@@ -11,7 +11,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding [style.backgroundColor]="globals.contentBackground">
       <div  class="toggle-icon toggle-checked">
         <ion-toggle [(ngModel)]="notification" (ionChange)="toggleNotification($event)" ></ion-toggle>
       </div>

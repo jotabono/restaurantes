@@ -17,6 +17,7 @@ export class PromosPage {
 
   constructor(public navCtrl: NavController, public globals: Globals, public loadingCtrl: LoadingController) {
     this.loader = this.loadingCtrl.create({
+      spinner: 'bubbles',
       content: "Cargando..."
     });
     this.loader.present();

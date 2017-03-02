@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { SocialSharing } from 'ionic-native';
+import { Globals } from '../../providers/globals';
 
 @Component({
   selector: 'page-socialnetworks',
+  providers: [Globals],
   templateUrl: 'socialnetworks.html'
 })
 export class SocialNetworksPage {
-  constructor(public navCtrl: NavController, public navParams: NavParams) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public globals: Globals) { }
   ionViewDidLoad() {
     console.log('ionViewDidLoad SocialnetworksPage');
   }

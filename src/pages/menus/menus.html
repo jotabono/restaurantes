@@ -11,7 +11,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content [style.backgroundColor]="globals.contentBackground">
   <ul class="list-menu" *ngFor="let menu of menus">
     <li class="item-stable menus" (click)="toggleCats(menu)" [ngClass]="{active: menu.showCats}">
       {{menu.name}}

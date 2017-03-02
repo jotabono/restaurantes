@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
   <ion-icon name="menu"></ion-icon>
 </button>
-    <ion-title>{{ 'PROMOSTITLE' | translate }}</ion-title>
+    <ion-title>{{ 'HOMETITLE' | translate }}</ion-title>
     <ion-select class="sel-lang" [(ngModel)]="lang" (ionChange)="globals.changeLanguage(lang)">
       <ion-option value="es">{{'SELSPANISH' | translate}}</ion-option>
       <ion-option value="en">{{'SELENGLISH' | translate}}</ion-option>
@@ -12,7 +12,7 @@
 </ion-header>
 
 <ion-content [style.backgroundColor]="globals.contentBackground">
-  <a [style.backgroundColor]="globals.buttonColor" class="button" *ngFor="let promotion of promotions" (click)="promoDetail(promotion)" ion-button full>
-    {{ promotion.name }}
-  </a>
+  <a [style.backgroundColor]="globals.buttonColor" class="button" ion-button full (click)="goRtts()">Restaurante</a>
+  <a [style.backgroundColor]="globals.buttonColor" class="button" ion-button full (click)="goMenus()">Menús</a>
+  <a [style.backgroundColor]="globals.buttonColor" class="button" ion-button full (click)="goPromos()">Promociones</a>
 </ion-content>

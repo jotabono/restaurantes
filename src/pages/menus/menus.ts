@@ -25,7 +25,8 @@ export class MenusPage {
 
   constructor(public globals: Globals, public loadingCtrl: LoadingController) {
     this.loader = this.loadingCtrl.create({
-      content: "Cargando..."
+      spinner: 'bubbles',
+      content: `<ion-content [style.backgroundColor]="globals.loaderBackground">Cargando...</ion-content>`,
     });
     this.loader.present();
     this.getMenus();
