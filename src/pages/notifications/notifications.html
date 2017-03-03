@@ -12,8 +12,8 @@
 </ion-header>
 
 <ion-content padding [style.backgroundColor]="globals.contentBackground">
-      <div  class="toggle-icon toggle-checked">
-        <ion-toggle [(ngModel)]="notification" (ionChange)="toggleNotification($event)" ></ion-toggle>
+      <div class="toggle-icon toggle-checked">
+        <ion-toggle [(ngModel)]="activatedNotifications" (ionChange)="toggleNotification($event)"></ion-toggle>
       </div>
       <div class="information">
          <h1>{{ status }}</h1>

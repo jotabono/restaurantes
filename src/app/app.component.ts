@@ -52,9 +52,9 @@ export class MyApp {
     });
   }
 
-  goRtts() {this.nav.setRoot(RestaurantPage);}
-  goMenus() {this.nav.setRoot(MenusPage);}
-  goPromos() {this.nav.setRoot(PromosPage);}
-  goNotifications() {this.nav.push(NotificationsPage);}
-  goSocialNetworks() {this.nav.push(SocialNetworksPage);}
+  goRtts() { this.nav.setRoot(RestaurantPage); }
+  goMenus() { this.nav.setRoot(MenusPage); }
+  goPromos() { this.nav.setRoot(PromosPage); }
+  goNotifications()  { this.nav.push(NotificationsPage); }
+  goSocialNetworks() { this.nav.push(SocialNetworksPage); }
 }

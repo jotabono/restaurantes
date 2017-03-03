@@ -11,7 +11,8 @@ import { Globals } from '../../providers/globals';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public globals: Globals) {}
+  constructor(public navCtrl: NavController, public globals: Globals) {
+  }
 
   goRtts(){this.navCtrl.push(RestaurantPage);}
   goMenus(){this.navCtrl.push(MenusPage);}
